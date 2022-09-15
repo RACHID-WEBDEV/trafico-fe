@@ -25,11 +25,10 @@ const Header = ({ headerData, navData }) => {
 
   return (
     <header
-      className={`${
-        header
-          ? 'bg-white px-3 py-3 rounded-md drop-shadow-primary'
-          : 'py-[40px]'
-      } fixed w-full left-0 right-0 mx-auto max-w-[90vw] lg:max-w-[1120px] z-20 flex justify-between items-center transition-all duration-500`}
+      className={`${header
+        ? 'bg-white px-3 py-3 rounded-md drop-shadow-primary'
+        : 'py-[40px]'
+        } fixed w-full left-0 right-0 mx-auto max-w-[90vw] lg:max-w-[1120px] z-20 flex justify-between items-center transition-all duration-500`}
     >
       {/* logo v1 */}
       <Link href={'/'}>
@@ -38,6 +37,7 @@ const Header = ({ headerData, navData }) => {
             src={`${header ? logoImgV2 : logoImgV1}`}
             width={header ? 180 : 212}
             height={50}
+            alt="Logo Image"
           />
         </a>
       </Link>
@@ -59,9 +59,8 @@ const Header = ({ headerData, navData }) => {
 
       {/* nav mobile - hide on large screens */}
       <div
-        className={`${
-          navMobile ? 'max-h-[154px]' : 'max-h-0'
-        } lg:hidden absolute top-full mt-2 w-full left-0 rounded-md overflow-hidden shadow-2xl  transition-all`}
+        className={`${navMobile ? 'max-h-[154px]' : 'max-h-0'
+          } lg:hidden absolute top-full mt-2 w-full left-0 rounded-md overflow-hidden shadow-2xl  transition-all`}
       >
         <NavMobile navData={navData} />
       </div>
